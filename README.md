@@ -74,6 +74,6 @@ All keys and values are stored as strings (This might change in the future)
      '14': '14', '15': '15', '16': '16', '17': '17', '18': '18', '19': '19',
      '2': '2', '3': '3', '4': '4', '5': '5', '6': '6', '7': '7', '8': '8', '9': '9'}
 
-# To remove them all
+# To remove all temp objects (keys that were randomly generated)
     from rstructs import delete_all_temp_objects
     delete_all_temp_objects(sr)
