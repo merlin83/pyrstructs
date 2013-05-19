@@ -1,6 +1,7 @@
+import os
 import sys
-sys.path.append("../rstructs/")
-from rstructs import rStruct, rList, rSet, rDict, delete_all_temp_objects
+sys.path.insert(0, os.path.abspath(".."))
+from rstructs.rstructs import rStruct, rList, rSet, rDict, delete_all_temp_objects
 import nose
 from redis import StrictRedis
 
