@@ -490,7 +490,9 @@ def get_temp_name(PREFIX="-", SUFFIX="-"):
 def delete_all_temp_objects(REDIS_CONNECTION=None):
     if REDIS_CONNECTION is None:
         return
-    REDIS_CONNECTION.delete(REDIS_CONNECTION.keys("TEMP:RSTRUCTS:*"))
+    keys = REDIS_CONNECTION.keys("TEMP:RSTRUCTS:*")
+    if len(keys) > 0:
+        REDIS_CONNECTION.delete(*keys)
 
 if __name__ == "__main__":
     pass
