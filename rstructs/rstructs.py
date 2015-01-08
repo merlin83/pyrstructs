@@ -96,6 +96,12 @@ class rList(list):
         del self[index]
         return value
 
+    def rpop(self):
+        return self.r.rpop(self.r_key)
+
+    def lpop(self):
+        return self.r.lpop(self.r_key)
+
     def remove(self, value):
         return self.r.lrem(self.r_key, 0, value)
 
