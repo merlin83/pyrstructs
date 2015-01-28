@@ -102,6 +102,12 @@ class rList(list):
     def lpop(self):
         return self.r.lpop(self.r_key)
 
+    def ltrim(self, start, stop):
+        return self.r.ltrim(self.r_key, start, stop)
+
+    def lrange(self, start, stop):
+        return self.r.lrange(self.r_key, start, stop)
+
     def remove(self, value):
         return self.r.lrem(self.r_key, 0, value)
 
